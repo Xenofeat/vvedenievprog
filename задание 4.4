@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            if ( a ==0 || b == 0)
+            {
+                Console.WriteLine("Введено нулевое число");
+            }
+            else
+            {
+                double k1 = a * a;
+                double k2 = b * b;
+                Console.WriteLine("сумма квадратов");
+                Console.WriteLine(k1+k2);
+                Console.WriteLine("разность квадратов");
+                Console.WriteLine(k1 - k2);
+                Console.WriteLine("произведение квадратов");
+                Console.WriteLine(k1* k2);
+                Console.WriteLine("частное квадратов");
+                Console.WriteLine(k1/k2);
+            }
+        }
+ 
+    }
+ 
+}
