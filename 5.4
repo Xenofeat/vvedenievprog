@@ -1,0 +1,35 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter x1");
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter y1");
+            int y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter x2");
+            int x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter y2");
+            int y2 = Convert.ToInt32(Console.ReadLine());
+            int a = x2 - x1;
+            if (a < 0) {
+                a = a * -1;
+                    }
+            int b = y2 - y1;
+            if (b< 0)
+            {
+                b = b * -1;
+            }
+            int res1 = 2 * a + 2 * b;
+            int res2 = a * b;
+            //double res = Math.Sqrt();
+            Console.WriteLine(res1);
+            Console.WriteLine(res2);
+
+        }
+    }
+}
