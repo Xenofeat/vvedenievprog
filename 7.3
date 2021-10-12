@@ -1,0 +1,16 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Введите стоимость =");
+    int a = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите килограммы =");
+    int b = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите килограммы для конечной суммы =");
+    int c = Convert.ToInt32(Console.ReadLine());
+    double v = a/b;
+    double o = v*c;
+    Console.WriteLine("Один килограмм =");
+    Console.WriteLine(v);
+    Console.WriteLine(o);
+  }
+}
