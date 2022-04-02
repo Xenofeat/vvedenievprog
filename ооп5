@@ -1,0 +1,115 @@
+#include <iostream> 
+using namespace std;
+char ch;
+string fullname(int nam)
+{
+	switch (nam)
+	{
+	case 0:
+	{
+		return "laborer";
+		break;
+	}
+	case 1:
+	{
+		return "secretary";
+		break;
+	}
+	case 2:
+	{
+		return "manager";
+		break;
+	}
+	case 3:
+	{
+		return "accountant";
+		break;
+	}
+	case 4:
+	{
+		return "executive";
+		break;
+	}
+	case 5:
+	{
+		return "researcher";
+		break;
+	}
+	}
+}
+class date 
+{
+private:
+	int year;
+	int mounth;
+	int day;
+public:
+	
+	void getdate() 
+	{
+		//date data_;
+		cout << "введите дату приема на работу \n";
+		cout << "Введите день " << endl;
+		cin >> day;
+		cout << "Введите месяц  " << endl;
+		cin >> mounth;
+		cout << "Введите год " << endl;
+		cin >> year;
+		//return data_;
+		
+	};
+	void outdate() {
+		//cout << data_.day << "/" << data_.mounth << "/" << data_.year;
+		cout << day << mounth << year;
+	};
+	
+};
+class employee 
+{
+private:
+	int number;
+	float salary;
+	enum etype { laborer, secretary, manager, accountant, executive, researcher };
+	etype name;
+	date dat;
+public:
+	employee getemploy() 
+	{
+		employee employ;
+		cin >> employ.number>> employ.salary;
+		dat.getdate();
+		cout << "\n Введите первую букву должности (laborer, secretary, manager, accountant, executive, researcher) : \n" << endl;
+		cin >> ch;
+		switch (ch)
+		{
+		defoult: "error";
+		case 'l':employ.name = laborer;
+			break;
+		case 's':employ.name = secretary;
+			break;
+		case 'm':employ.name = manager;
+			break;
+		case 'a':employ.name = accountant;
+			break;
+		case 'e':employ.name = executive;
+			break;
+		case 'r':employ.name = researcher;
+			break;
+		}
+		return employ;
+	};
+	employee  putemploy(employee chelovek) 
+	{
+		chelovek.dat.outdate();
+		cout << "\n"<<chelovek.number << "\n" << chelovek.salary << "\n" << fullname(chelovek.name) << endl;
+		return chelovek;
+	};
+};
+int main()
+{
+	setlocale(LC_ALL, "rus");
+	employee emp1;
+	cout << "введите данные о первом сотруднике\n";
+	emp1.putemploy(emp1.getemploy());
+}
+ 
